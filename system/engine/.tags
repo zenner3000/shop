@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Loader	loader.php	/^final class Loader {$/;"	c
+__construct	loader.php	/^	public function __construct($registry) {$/;"	f
+action	loader.php	/^		$action = new Action($route, $args);$/;"	v
+args	loader.php	/^	public function controller($route, $args = array()) {$/;"	v
+class	loader.php	/^		$class = 'Model' . preg_replace('\/[^a-zA-Z0-9]\/', '', $model);$/;"	v
+config	loader.php	/^	public function config($config) {$/;"	f
+controller	loader.php	/^	public function controller($route, $args = array()) {$/;"	f
+data	loader.php	/^	public function view($template, $data = array()) {$/;"	v
+file	loader.php	/^		$file = DIR_APPLICATION . 'model\/' . $model . '.php';$/;"	v
+file	loader.php	/^		$file = DIR_SYSTEM . 'helper\/' . $helper . '.php';$/;"	v
+file	loader.php	/^		$file = DIR_SYSTEM . 'library\/' . $library . '.php';$/;"	v
+file	loader.php	/^		$file = DIR_TEMPLATE . $template;$/;"	v
+helper	loader.php	/^	public function helper($helper) {$/;"	f
+language	loader.php	/^	public function language($language) {$/;"	f
+library	loader.php	/^	public function library($library) {$/;"	f
+model	loader.php	/^	public function model($model) {$/;"	f
+output	loader.php	/^			$output = ob_get_contents();$/;"	v
+registry	loader.php	/^		$this->registry = $registry;$/;"	v
+registry	loader.php	/^	private $registry;$/;"	v
+view	loader.php	/^	public function view($template, $data = array()) {$/;"	f
