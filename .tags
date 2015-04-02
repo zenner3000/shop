@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+VERSION	index.php	/^define('VERSION', '2.0.2.0');$/;"	d
+action	index.php	/^	$action = new Action($request->get['route']);$/;"	v
+action	index.php	/^	$action = new Action('common\/home');$/;"	v
+browser_languages	index.php	/^		$browser_languages = explode(',', $request->server['HTTP_ACCEPT_LANGUAGE']);$/;"	v
+cache	index.php	/^$cache = new Cache('file');$/;"	v
+code	index.php	/^	$code = $detect ? $detect : $config->get('config_language');$/;"	v
+code	index.php	/^	$code = $request->cookie['language'];$/;"	v
+code	index.php	/^	$code = $session->data['language'];$/;"	v
+config	index.php	/^$config = new Config();$/;"	v
+controller	index.php	/^$controller = new Front($registry);$/;"	v
+customer	index.php	/^$customer = new Customer($registry);$/;"	v
+db	index.php	/^$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);$/;"	v
+detect	index.php	/^						$detect = $key;$/;"	v
+detect	index.php	/^	$detect = '';$/;"	v
+error	index.php	/^			$error = 'Fatal Error';$/;"	v
+error	index.php	/^			$error = 'Notice';$/;"	v
+error	index.php	/^			$error = 'Unknown';$/;"	v
+error	index.php	/^			$error = 'Warning';$/;"	v
+error_handler	index.php	/^function error_handler($errno, $errstr, $errfile, $errline) {$/;"	f
+event	index.php	/^$event = new Event($registry);$/;"	v
+key	index.php	/^			foreach ($languages as $key => $value) {$/;"	v
+language	index.php	/^$language = new Language($languages[$code]['directory']);$/;"	v
+languages	index.php	/^$languages = array();$/;"	v
+loader	index.php	/^$loader = new Loader($registry);$/;"	v
+locale	index.php	/^					$locale = explode(',', $value['locale']);$/;"	v
+log	index.php	/^$log = new Log($config->get('config_error_filename'));$/;"	v
+query	index.php	/^$query = $db->query("SELECT * FROM " . DB_PREFIX . "event");$/;"	v
+query	index.php	/^$query = $db->query("SELECT * FROM `" . DB_PREFIX . "language` WHERE status = '1'");$/;"	v
+query	index.php	/^$query = $db->query("SELECT * FROM `" . DB_PREFIX . "setting` WHERE store_id = '0' OR store_id = '" . (int)$config->get('config_store_id') . "' ORDER BY store_id ASC");$/;"	v
+registry	index.php	/^$registry = new Registry();$/;"	v
+request	index.php	/^$request = new Request();$/;"	v
+response	index.php	/^$response = new Response();$/;"	v
+session	index.php	/^$session = new Session();$/;"	v
+store_query	index.php	/^	$store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`ssl`, 'www.', '') = '" . $db->escape('https:\/\/' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '\/.\\\\') . '\/') . "'");$/;"	v
+store_query	index.php	/^	$store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $db->escape('http:\/\/' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '\/.\\\\') . '\/') . "'");$/;"	v
+url	index.php	/^$url = new Url($config->get('config_url'), $config->get('config_secure') ? $config->get('config_ssl') : $config->get('config_url'));$/;"	v
