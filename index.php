@@ -1,4 +1,18 @@
 <?php
+
+
+//访问控制统一用 index.php 来协调
+/*
+Route 就是起到一个中转器的作用，它会根据你的Route目录去找到它要执行的方法，比如：
+　　index.php?route=account/login
+　　根据这个route，op的框架会找到Controller下的Account里的Login.php, 注意login.php的类名一定是这种格式的ControllerAccoutLogin{...}
+　　否则Op就识别不了目录，route=account/login 会执行类的默认方法：index
+　　如果要指明执行那个方法，则在login后面再加上
+　　route=account/login/你定义的方法名
+并且在login.php 里定义你要执行的方法。
+*/
+
+
 // Version
 define('VERSION', '2.0.2.0');
 
