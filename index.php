@@ -172,7 +172,7 @@ if (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS
 	$store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $db->escape('http://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
 }
 
-if ($store_query->num_rows) {
+	if ($store_query->num_rows) {
 	$config->set('config_store_id', $store_query->row['store_id']);
 } else {
 	$config->set('config_store_id', 0);
