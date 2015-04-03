@@ -12,7 +12,10 @@ final class Front {
 		$this->pre_action[] = $pre_action;
 	}
 
+
+	//
 	public function dispatch($action, $error) {
+
 		$this->error = $error;
 
 		foreach ($this->pre_action as $pre_action) {
@@ -30,9 +33,12 @@ final class Front {
 		}
 	}
 
-	private function execute($action) {
-		$result = $action->execute($this->registry);
 
+	//执行 动作，就是Action类的execute方法根据HTTP请求 ，找到相应的文件-->类-->函数,参数
+	private function execute($action) {
+		$result = $action->execute($this->registry);  //执行动作
+
+		//执行的结果返回
 		if (is_object($result)) {
 			$action = $result;
 		} elseif ($result === false) {

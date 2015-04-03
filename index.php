@@ -150,6 +150,9 @@ if (!defined('DIR_APPLICATION')) {
 // Startup
 require_once(DIR_SYSTEM . 'startup.php');
 
+//我们自己的调试函数
+//require_once(DIR_ROOT . 'debug.php');
+
 // Registry
 $registry = new Registry();
 
@@ -366,7 +369,7 @@ foreach ($query->rows as $result) {
 	$event->register($result['trigger'], $result['action']);
 }
 
-// Front Controller
+// Front Controller 
 $controller = new Front($registry);
 
 // Maintenance Mode
@@ -375,15 +378,17 @@ $controller->addPreAction(new Action('common/maintenance'));
 // SEO URL's
 $controller->addPreAction(new Action('common/seo_url'));
 
-// Router
+// Router ,把客户端HTTP每次请求生成一个 Action对象 
 if (isset($request->get['route'])) {
 	$action = new Action($request->get['route']);
 } else {
 	$action = new Action('common/home');
 }
 
-// Dispatch
+// Dispatch 
 $controller->dispatch($action, new Action('error/not_found'));
 
+
+//print_r($registry->get('response'));
 // Output
 $response->output();

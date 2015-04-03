@@ -18,6 +18,10 @@ define('DIR_UPLOAD', 'D:/wamp/www/shop/system/upload/');
 define('DIR_MODIFICATION', 'D:/wamp/www/shop/system/modification/');
 define('DIR_LOGS', 'D:/wamp/www/shop/system/logs/');
 
+//add by zw
+define('DIR_ROOT','D:/wamp/www/shop/');
+
+
 // DB
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');

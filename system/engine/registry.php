@@ -1,4 +1,8 @@
 <?php
+/*
+Registry 是一个单例类。
+所有大的其他类都放入这个 单例内
+*/
 final class Registry {
 	private $data = array();
 

@@ -1,0 +1,94 @@
+2015-04-03 15:01:51 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 388
+2015-04-03 15:07:56 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 388
+2015-04-03 15:08:28 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:08:29 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:08:59 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:09:52 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:14:20 - PHP Unknown:  Object of class Response could not be converted to string in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:25:22 - PHP Notice:  Undefined variable: get_headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:25:32 - PHP Notice:  Undefined variable: headers in D:\wamp\www\shop\index.php on line 389
+2015-04-03 15:45:15 - PHP Notice:  Undefined variable: html in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:45:15 - PHP Notice:  Undefined index: file in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:45:15 - PHP Notice:  Undefined index: line in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:54:50 - PHP Notice:  Undefined variable: html in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:54:50 - PHP Notice:  Undefined index: file in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:54:50 - PHP Notice:  Undefined index: line in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:55:12 - PHP Notice:  Undefined variable: html in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:55:12 - PHP Notice:  Undefined index: file in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 15:55:12 - PHP Notice:  Undefined index: line in D:\wamp\www\shop\debug.php on line 11
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:01:16 - PHP Notice:  Use of undefined constant registry - assumed 'registry' in D:\wamp\www\shop\system\engine\action.php on line 65
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:21 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:06:46 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:06:46 - PHP Notice:  Undefined property: Action::$1 in D:\wamp\www\shop\system\engine\action.php on line 80
+2015-04-03 18:07:19 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:08:24 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:08:27 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:08:57 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:08:59 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:09:16 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:09:17 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:09:17 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:09:17 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:10:18 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:10:20 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
+2015-04-03 18:10:27 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79

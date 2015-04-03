@@ -1,4 +1,8 @@
 <?php
+/*
+HTTP请求类
+包含了POST,GET ,COOKIE请求,服务器信息等信息
+*/
 class Request {
 	public $get = array();
 	public $post = array();
@@ -8,11 +12,15 @@ class Request {
 
 	public function __construct() {
 		$this->get = $this->clean($_GET);
+	//	print_r($this->get);
 		$this->post = $this->clean($_POST);
 		$this->request = $this->clean($_REQUEST);
 		$this->cookie = $this->clean($_COOKIE);
+	//	print_r($this->cookie);
 		$this->files = $this->clean($_FILES);
+	//	print_r($this->files);
 		$this->server = $this->clean($_SERVER);
+	//	print_r($this->server);
 	}
 
 	public function clean($data) {
