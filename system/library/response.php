@@ -30,7 +30,7 @@ class Response {
 	}
 
 
-		//获取调用堆栈
+	//获取调用堆栈
 	public function print_stack_trace()
 	{
 	    $array =debug_backtrace();
@@ -40,7 +40,7 @@ class Response {
 	    {
 	       $html .=$row['file'].':'.$row['line'].'行,调用方法:'.$row['function']."<p>";
 	    }
-	    return$html;
+	    return $html;
 	}
 	
 

@@ -79,6 +79,7 @@ final class Action {
 		//	echo $this->$count;
 		//	print_stack_trace();
 		//	print_r($class . "<br>");
+		//	print_r($class);
 			$controller = new $class($registry);
 
 			//调用前先判断是否能调用
