@@ -2,7 +2,7 @@
 class ControllerCommonHome extends Controller {
 
 
-		//获取调用堆栈
+	//获取调用堆栈
 	public function print_stack_trace()
 	{
 	    $array =debug_backtrace();
@@ -28,11 +28,17 @@ class ControllerCommonHome extends Controller {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}
 
+		if(is_a($this->load,'Load')){
+			echo '#this->load is Class Load';
+		}
+
+	//	print_r($this->load);
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 	//	print_r($data['content_top']);
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+	//	print_r($data['content_top']);
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

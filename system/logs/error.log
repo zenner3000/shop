@@ -94,3 +94,17 @@
 2015-04-03 18:10:27 - PHP Notice:  Undefined variable: count in D:\wamp\www\shop\system\engine\action.php on line 79
 2015-04-06 11:13:17 - PHP Warning:  unlink(D:/wamp/www/shop/system/cache/cache.language.1428315197): Permission denied in D:\wamp\www\shop\system\library\cache\file.php on line 68
 2015-04-06 11:13:17 - PHP Warning:  unlink(D:/wamp/www/shop/system/cache/cache.currency.1428315197): Permission denied in D:\wamp\www\shop\system\library\cache\file.php on line 68
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53

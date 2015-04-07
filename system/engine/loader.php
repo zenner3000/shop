@@ -2,17 +2,37 @@
 final class Loader {
 	private $registry;
 
+
+	//获取调用堆栈
+	public function print_stack_trace()
+	{
+	    $array =debug_backtrace();
+	  //print_r($array);//信息很齐全
+	   unset($array[0]);
+	   foreach($array as $row)
+	    {
+	       $html .=$row['file'].':'.$row['line'].'行,调用方法:'.$row['function']."<p>";
+	    }
+	    return $html;
+	}
+	
+
+
 	public function __construct($registry) {
 		$this->registry = $registry;
 	}
 
+	//执行动作。调用响应的类里的方法
 	public function controller($route, $args = array()) {
 		$action = new Action($route, $args);
 
 		return $action->execute($this->registry);
 	}
 
+
+	//找到响应的mode类，new一个，用$registry->set设置一下,实际是添加到$registry里面的data数组里
 	public function model($model) {
+	//	print_stack_trace();
 		$file = DIR_APPLICATION . 'model/' . $model . '.php';
 		$class = 'Model' . preg_replace('/[^a-zA-Z0-9]/', '', $model);
 
@@ -26,7 +46,13 @@ final class Loader {
 		}
 	}
 
+
+	//加载模板内容到缓冲区
 	public function view($template, $data = array()) {
+	//	print_r($template);
+	//	echo $data;
+	//	print_stack_trace();
+
 		$file = DIR_TEMPLATE . $template;
 
 		if (file_exists($file)) {
@@ -46,6 +72,7 @@ final class Loader {
 			exit();
 		}
 	}
+
 
 	public function library($library) {
 		$file = DIR_SYSTEM . 'library/' . $library . '.php';
