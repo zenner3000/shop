@@ -561,7 +561,9 @@ class ControllerProductProduct extends Controller {
 		}
 	}
 
+	//评论
 	public function review() {
+		//echo 'review------------';
 		$this->load->language('product/product');
 
 		$this->load->model('catalog/review');
@@ -606,7 +608,9 @@ class ControllerProductProduct extends Controller {
 		}
 	}
 
+	//
 	public function write() {
+		echo 'write log info---------';
 		$this->load->language('product/product');
 
 		$json = array();
@@ -647,7 +651,9 @@ class ControllerProductProduct extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
 
+
 	public function getRecurringDescription() {
+		
 		$this->language->load('product/product');
 		$this->load->model('catalog/product');
 
@@ -705,5 +711,18 @@ class ControllerProductProduct extends Controller {
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
+	}
+
+	//获取调用堆栈
+	public function print_stack_trace()
+	{
+	    $array =debug_backtrace();
+	  //print_r($array);//信息很齐全
+	   unset($array[0]);
+	   foreach($array as $row)
+	    {
+	       $html .=$row['file'].':'.$row['line'].'行,调用方法:'.$row['function']."<p>";
+	    }
+	    return $html;
 	}
 }

@@ -1,44 +1,28 @@
 <?php
 
+	function loadtpl() {
+ 
 
-class  God{
-	public $member1 = 1;
-	public $member2;
+		$file = 'D:\wamp\www\shop\test.tpl';
 
-	public function printline(){
-		echo '\n';
+		if (file_exists($file)) {
+			
+
+			ob_start();
+
+			require($file);
+
+			$output = ob_get_contents();
+
+			ob_end_clean();
+
+			return $output;
+		} else {
+			trigger_error('Error: Could not load template ' . $file . '!');
+			exit();
+		}
 	}
-}
 
-abstract class Controller1{
-	public $registry;
+	echo loadtpl();
 
-	public function __construct($registry) {
-		$this->registry = $registry;
-	}
-
-	public function __get($key) {
-		return $this->registry->get($key);
-	}
-
-	public function __set($key, $value) {
-		$this->registry->set($key, $value);
-	}
-}
-
-final class Test extends Controller1{	
- 	
-    
-
-	public function __construct(){
-		 
-	}
- 	
- 	public function outtest(){
- 		echo $this->member1;	
- 	}
-}
-
-$test = new Test(new God());
-
-$test->outtest();
+ 
