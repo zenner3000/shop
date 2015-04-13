@@ -1,28 +1,14 @@
 <?php
+error_reporting(E_ALL);
+function increment(&$var)
+{
+    $var++;
+}
 
-	function loadtpl() {
- 
+$a = 0;
+//call_user_func('increment', $a);
+echo $a."\n";
 
-		$file = 'D:\wamp\www\shop\test.tpl';
-
-		if (file_exists($file)) {
-			
-
-			ob_start();
-
-			require($file);
-
-			$output = ob_get_contents();
-
-			ob_end_clean();
-
-			return $output;
-		} else {
-			trigger_error('Error: Could not load template ' . $file . '!');
-			exit();
-		}
-	}
-
-	echo loadtpl();
-
- 
+call_user_func_array('increment', array(&$a)); // You can use this instead before PHP 5.3
+echo $a."\n";
+?> 

@@ -108,3 +108,7 @@
 2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
 2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
 2015-04-07 11:09:10 - PHP Notice:  Array to string conversion in D:\wamp\www\shop\system\engine\loader.php on line 53
+2015-04-13 8:57:32 - PHP Notice:  Undefined variable: data in D:\wamp\www\shop\catalog\controller\common\home.php on line 40
+2015-04-13 8:57:59 - PHP Notice:  Undefined variable: data in D:\wamp\www\shop\catalog\controller\common\home.php on line 40
+2015-04-13 8:58:05 - PHP Notice:  Undefined variable: data in D:\wamp\www\shop\catalog\controller\common\home.php on line 40
+2015-04-13 8:58:13 - PHP Notice:  Undefined variable: data in D:\wamp\www\shop\catalog\controller\common\home.php on line 40

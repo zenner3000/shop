@@ -1,5 +1,7 @@
 <?php
+/*paypal 登录模块*/
 class ModelModulePPLogin extends Model {
+	
 	public function getTokens($code) {
 		if ($this->config->get('pp_login_sandbox')) {
 			$endpoint = 'https://api.sandbox.paypal.com/v1/oauth2/token';

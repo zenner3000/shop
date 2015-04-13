@@ -1,4 +1,8 @@
 <?php
+
+/*
+	首页的Action文件
+*/
 class ControllerCommonHome extends Controller {
 
 
@@ -32,13 +36,15 @@ class ControllerCommonHome extends Controller {
 			echo '#this->load is Class Load';
 		}
 
-	//	print_r($this->load);
+	//	print_r($this->load);		
 		$data['column_left'] = $this->load->controller('common/column_left');
+	/*	if(is_null($data['column_left']) )
+		{
+			echo '-------------column_left--------' ;
+		} 访问首页，测试发现并不为空 */
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
-	//	print_r($data['content_top']);
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-	//	print_r($data['content_top']);
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

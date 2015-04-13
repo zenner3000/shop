@@ -10,6 +10,7 @@ class ModelDesignLayout extends Model {
 		}
 	}
 	
+	//获取布局模块，返回从数据库里select的所有行
 	public function getLayoutModules($layout_id, $position) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "layout_module WHERE layout_id = '" . (int)$layout_id . "' AND position = '" . $this->db->escape($position) . "' ORDER BY sort_order");
 		

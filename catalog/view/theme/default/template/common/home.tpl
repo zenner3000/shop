@@ -8,7 +8,27 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?><?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+    <div id="content" class="<?php echo $class; ?>">
+    <?php  echo $content_top; /*这里是中间的橱窗和格子内容*/ ?>
+    <?php echo $content_bottom; 
+            if(is_null($content_bottom) )
+        {
+            echo '-11111111111111------------$content_bottom is null--------' ;
+        }/* 访问首页，经过测试不为空啊*/  ?>
+    </div>
+    <?php echo $column_right; ?>
+  </div>
 </div>
-<?php echo $footer; ?>
+<?php echo $footer;  ?>
+
+
+<?php 
+/*
+按以下顺序输出 
+$content_top， 
+$content_bottom; ，
+$column_right;   
+
+$footer;  
+*/
+?>

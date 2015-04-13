@@ -32,6 +32,7 @@ final class Loader {
 
 	//找到响应的mode类，new一个，用$registry->set设置一下,实际是添加到$registry里面的data数组里
 	public function model($model) {
+		
 	//	print_stack_trace();
 		$file = DIR_APPLICATION . 'model/' . $model . '.php';
 		$class = 'Model' . preg_replace('/[^a-zA-Z0-9]/', '', $model);
@@ -47,7 +48,7 @@ final class Loader {
 	}
 
 
-	//加载模板内容到缓冲区
+	//加载模板内容到缓冲区,返回该缓冲区变量
 	public function view($template, $data = array()) {
 	//	print_r($template);
 	//	echo $data;
@@ -56,7 +57,8 @@ final class Loader {
 		$file = DIR_TEMPLATE . $template;
 
 		if (file_exists($file)) {
-			extract($data);
+			//把$data里面的成员添加到符号表（我理解为实际上就是 $变量= xx值 这样的形式）
+			extract($data);  
 
 			ob_start();
 

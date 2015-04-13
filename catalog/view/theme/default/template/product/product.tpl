@@ -1,8 +1,11 @@
 <?php echo $header; ?>
+<?php /*这里可以打开谷歌浏览器，访问网站，F12，然后对着
+  catalog\view\theme\default\template\product里的模板来调试
+  */ ?>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <li><a href="<?php echo '------------' . $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li> 
     <?php } ?>
   </ul>
   <div class="row"><?php echo $column_left; ?>
@@ -13,7 +16,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php  echo $class;  ?>"><?php echo $content_top; ?>
       <div class="row">
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
