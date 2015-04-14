@@ -68,6 +68,7 @@ class ControllerCommonContentTop extends Controller {
 		slideshow.27
 		featured.28
 		carousel.29
+		执行这几个相应文件里面的方法，这些方法返回模板内容
 		*/
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
@@ -87,7 +88,14 @@ class ControllerCommonContentTop extends Controller {
 
 
 
-		//
+		//最后执行 加载模板，把模板内容返回
+		// $data 在view()里面会extract(),也就是 会变成一个modules变量 ，是数组.  content_top.tpl里面是以下内容，就是输出上面modules里模块的模板
+		/*
+		 * <?php foreach ($modules as $module) { ?>
+		<?php echo $module; ?>
+		<?php } ?>
+		 * */
+		// 总的来说就是  content_top.tpl 里面输出 slideshow，featured，carousel 这几个模板的内容
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/content_top.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/common/content_top.tpl', $data);
 		} else {

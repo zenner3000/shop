@@ -1,5 +1,12 @@
 <?php
+
+/*
+Slideshow 
+*/
 class ControllerModuleSlideshow extends Controller {
+
+
+	
 	public function index($setting) {
 		static $module = 0;
 

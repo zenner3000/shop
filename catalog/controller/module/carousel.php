@@ -1,5 +1,10 @@
 <?php
+/*
+	carousel中文 旋转木马
+*/
 class ControllerModuleCarousel extends Controller {
+
+	
 	public function index($setting) {
 		static $module = 0;
 
