@@ -7,6 +7,7 @@ class ControllerCommonContentTop extends Controller {
 
 	public function index() {
 
+
 		$this->load->model('design/layout');
 
 		//获取到路由地址(实际就是要访问的文件里面的方法)
@@ -18,6 +19,10 @@ class ControllerCommonContentTop extends Controller {
 
 		$layout_id = 0;
 
+
+
+
+		//根据路由访问，获取不同的布局ID
 		//如果点击的是分类
 		if ($route == 'product/category' && isset($this->request->get['path'])) {
 			$this->load->model('catalog/category');
@@ -53,9 +58,17 @@ class ControllerCommonContentTop extends Controller {
 
 		$data['modules'] = array();
 
-		//获取到布局模块
+
+
+
+		//上面布局ID获取完之后，根据布局ID，获取到布局模块
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_top');
 
+		/*  调试发现，modules里面是这3个模块,实际上是指示catalog\controller\module 下面的文件
+		slideshow.27
+		featured.28
+		carousel.29
+		*/
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 
@@ -72,6 +85,9 @@ class ControllerCommonContentTop extends Controller {
 			}
 		}
 
+
+
+		//
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/content_top.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/common/content_top.tpl', $data);
 		} else {
