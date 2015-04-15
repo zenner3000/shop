@@ -17,7 +17,7 @@ class ControllerModuleCarousel extends Controller {
 		$data['banners'] = array();
 
 		$results = $this->model_design_banner->getBanner($setting['banner_id']);
-
+        //取出图片标题，链接
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$data['banners'][] = array(
@@ -29,7 +29,7 @@ class ControllerModuleCarousel extends Controller {
 		}
 
 		$data['module'] = $module++;
-
+        //返回模板内容
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/carousel.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/module/carousel.tpl', $data);
 		} else {

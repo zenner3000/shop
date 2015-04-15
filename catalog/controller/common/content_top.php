@@ -65,13 +65,18 @@ class ControllerCommonContentTop extends Controller {
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_top');
 
 		/*  调试发现，modules里面是这3个模块,实际上是指示catalog\controller\module 下面的文件
-		slideshow.27
-		featured.28
-		carousel.29
+		slideshow.27  , 产品列表上面的个大的可以滑动的图片
+		featured.28   , 产品列表
+		carousel.29   , 就是产品列表下面的那行 品牌logo，可以转动的
 		执行这几个相应文件里面的方法，这些方法返回模板内容
 		*/
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
+
+			/* //跳过后，首页就不会显示响应的那一部分
+			if($part[0] == 'carousel'){ 
+				continue;
+			}  */
 
 			if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
 				$data['modules'][] = $this->load->controller('module/' . $part[0]);

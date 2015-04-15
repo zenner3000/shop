@@ -1,7 +1,7 @@
 <?php
 
 /*
-Featured 
+Featured ，首页货物列表
 */
 class ControllerModuleFeatured extends Controller {
 
@@ -27,15 +27,15 @@ class ControllerModuleFeatured extends Controller {
 		if (!$setting['limit']) {
 			$setting['limit'] = 4;
 		}
-
+        //$setting 数组里面包含了图片宽高，状态，显示的货物数，货物列表名,还有一个包含产品ID的数组$setting['product']
 		if (!empty($setting['product'])) {
 			$products = array_slice($setting['product'], 0, (int)$setting['limit']);
 
 			foreach ($products as $product_id) {
-				$product_info = $this->model_catalog_product->getProduct($product_id);
-
+				$product_info = $this->model_catalog_product->getProduct($product_id);//从数据库里取出来产品的信息
+                //产品里面的一些信息，图片，税 ，根据配置计算，最后把计算好的产品信息 放到 $data['products'][] 里
 				if ($product_info) {
-					if ($product_info['image']) {
+					if ($product_info['image']) { //如果图片存在的话，就根据配置里设置的调整大小
 						$image = $this->model_tool_image->resize($product_info['image'], $setting['width'], $setting['height']);
 					} else {
 						$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
@@ -79,7 +79,7 @@ class ControllerModuleFeatured extends Controller {
 				}
 			}
 		}
-
+		//返回响应的featured 模板的内容
 		if ($data['products']) {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/featured.tpl')) {
 				return $this->load->view($this->config->get('config_template') . '/template/module/featured.tpl', $data);

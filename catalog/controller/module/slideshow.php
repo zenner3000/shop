@@ -1,7 +1,7 @@
 <?php
 
 /*
-Slideshow 
+Slideshow 获取列表上方 可滑动的图片展示
 */
 class ControllerModuleSlideshow extends Controller {
 
@@ -10,6 +10,7 @@ class ControllerModuleSlideshow extends Controller {
 	public function index($setting) {
 		static $module = 0;
 
+		//加载模板
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
 
@@ -31,7 +32,7 @@ class ControllerModuleSlideshow extends Controller {
 		}
 
 		$data['module'] = $module++;
-
+		//读取模板内容返回
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/slideshow.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/module/slideshow.tpl', $data);
 		} else {

@@ -1,8 +1,10 @@
 <?php
 class ControllerProductProduct extends Controller {
+
 	private $error = array();
 
 	public function index() {
+
 		$this->load->language('product/product');
 
 		$data['breadcrumbs'] = array();
@@ -546,6 +548,7 @@ class ControllerProductProduct extends Controller {
 
 			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
 
+
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
@@ -553,6 +556,7 @@ class ControllerProductProduct extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
+            //读取模板，返回内容
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/error/not_found.tpl', $data));
 			} else {
