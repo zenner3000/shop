@@ -27,6 +27,7 @@ class ControllerModuleFeatured extends Controller {
 		if (!$setting['limit']) {
 			$setting['limit'] = 4;
 		}
+		
         //$setting 数组里面包含了图片宽高，状态，显示的货物数，货物列表名,还有一个包含产品ID的数组$setting['product']
 		if (!empty($setting['product'])) {
 			$products = array_slice($setting['product'], 0, (int)$setting['limit']);
