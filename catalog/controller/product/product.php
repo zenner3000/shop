@@ -1,10 +1,14 @@
 <?php
+/*
+	单个产品页面的显示.
+*/
 class ControllerProductProduct extends Controller {
 
 	private $error = array();
 
 	public function index() {
 
+		//把语言添加到 $registry 数组
 		$this->load->language('product/product');
 
 		$data['breadcrumbs'] = array();
@@ -14,8 +18,9 @@ class ControllerProductProduct extends Controller {
 			'href' => $this->url->link('common/home')
 		);
 
-		$this->load->model('catalog/category');
 
+		$this->load->model('catalog/category');
+		//这里获取分类信息
 		if (isset($this->request->get['path'])) {
 			$path = '';
 
@@ -40,7 +45,7 @@ class ControllerProductProduct extends Controller {
 				}
 			}
 
-			// Set the last category breadcrumb
+			// Set the last category breadcrumb  
 			$category_info = $this->model_catalog_category->getCategory($category_id);
 
 			if ($category_info) {
@@ -71,6 +76,7 @@ class ControllerProductProduct extends Controller {
 
 		$this->load->model('catalog/manufacturer');
 
+		//根据制造商ID获取制造商信息
 		if (isset($this->request->get['manufacturer_id'])) {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_brand'),
@@ -105,6 +111,7 @@ class ControllerProductProduct extends Controller {
 			}
 		}
 
+		//
 		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
 			$url = '';
 

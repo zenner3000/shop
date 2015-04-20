@@ -28,37 +28,37 @@ class ControllerCommonHome extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-		if (isset($this->request->get['route'])) {
-			$this->document->addLink(HTTP_SERVER, 'canonical');
-		}
+		// if (isset($this->request->get['route'])) {
+		// 	$this->document->addLink(HTTP_SERVER, 'canonical');
+		// }
 
-		if(is_a($this->load,'Load')){
-			echo '#this->load is Class Load';
-		}
+		// if(is_a($this->load,'Load')){
+		// 	echo '#this->load is Class Load';
+		// }
 
 	//	print_r($this->load);		
 		$data['column_left'] = $this->load->controller('common/column_left');
-		if(is_null($data['column_left']) )
-		{
-			echo '-------------column_left--------' ;
-			echo '-------column_left is    null---------' ;
-		} // 访问首页，测试发现并不为空
-		else{
-			var_dump($data['column_left']);
-			echo '-------column_left is not null---------' ;
-		}   
+		// if(is_null($data['column_left']) )
+		// {
+		// 	echo '-------------column_left--------' ;
+		// 	echo '-------column_left is    null---------' ;
+		// } // 访问首页，测试发现并不为空
+		// else{
+		// 	var_dump($data['column_left']);
+		// 	echo '-------column_left is not null---------' ;
+		// }   
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		if(is_null($data['content_bottom']) )
-		{
-			echo '-------------content_bottom--------' ;
-			echo '-------content_bottom is    null---------' ;
-		} // 访问首页，测试发现并不为空
-		else{
-			var_dump($data['content_bottom']);
-			echo '-------content_bottom is not null---------' ;
-		}   
+		// if(is_null($data['content_bottom']) )
+		// {
+		// 	echo '-------------content_bottom--------' ;
+		// 	echo '-------content_bottom is    null---------' ;
+		// } // 访问首页，测试发现并不为空
+		// else{
+		// 	var_dump($data['content_bottom']);
+		// 	echo '-------content_bottom is not null---------' ;
+		// }   
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

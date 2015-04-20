@@ -1,6 +1,6 @@
 <?php
 /*
-	carousel中文 旋转木马
+	carousel中文 旋转木马 ,产品列表下面的那行 品牌logo，可以转动的
 */
 class ControllerModuleCarousel extends Controller {
 
