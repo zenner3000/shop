@@ -111,7 +111,7 @@ class ControllerProductProduct extends Controller {
 			}
 		}
 
-		//
+		//如果是搜索
 		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
 			$url = '';
 
@@ -166,7 +166,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
+		//
 		if ($product_info) {
 			$url = '';
 
@@ -218,10 +218,13 @@ class ControllerProductProduct extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
+			//产品信息
 			$data['breadcrumbs'][] = array(
 				'text' => $product_info['name'],
 				'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
 			);
+
+
 
 			$this->document->setTitle($product_info['meta_title']);
 			$this->document->setDescription($product_info['meta_description']);
@@ -304,6 +307,7 @@ class ControllerProductProduct extends Controller {
 
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 
+			//获取弹出图片信息
 			foreach ($results as $result) {
 				$data['images'][] = array(
 					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height')),
@@ -311,6 +315,7 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 
+            
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {
@@ -332,7 +337,7 @@ class ControllerProductProduct extends Controller {
 			$discounts = $this->model_catalog_product->getProductDiscounts($this->request->get['product_id']);
 
 			$data['discounts'] = array();
-
+			//折扣信息
 			foreach ($discounts as $discount) {
 				$data['discounts'][] = array(
 					'quantity' => $discount['quantity'],
@@ -381,8 +386,10 @@ class ControllerProductProduct extends Controller {
 				$data['minimum'] = 1;
 			}
 
+			//获取评论状态
 			$data['review_status'] = $this->config->get('config_review_status');
 
+			//游客评论
 			if ($this->config->get('config_review_guest') || $this->customer->isLogged()) {
 				$data['review_guest'] = true;
 			} else {
@@ -402,6 +409,7 @@ class ControllerProductProduct extends Controller {
 
 			$data['products'] = array();
 
+			//获取到相关的产品，产品页面下方有个相关的产品
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
 			foreach ($results as $result) {
@@ -467,6 +475,7 @@ class ControllerProductProduct extends Controller {
 
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
+			//如果设置了google验证码，就添加脚本
 			if ($this->config->get('config_google_captcha_status')) {
 				$this->document->addScript('https://www.google.com/recaptcha/api.js');
 
@@ -475,6 +484,7 @@ class ControllerProductProduct extends Controller {
 				$data['site_key'] = '';
 			}
 
+
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
@@ -482,12 +492,13 @@ class ControllerProductProduct extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
+			//读取模板，返回内容
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
 			} else {
 				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
 			}
-		} else {
+		} else {  //是if($product_info)的else
 			$url = '';
 
 			if (isset($this->request->get['path'])) {
